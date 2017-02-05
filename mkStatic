@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# make static projects one level up
+
+if [[ ! -z  "$1" ]];
+then
+  if [[ ! -d "../$1" ]];
+  then
+    echo "Making folder.. $1"
+    mkdir -p "../$1"
+  else
+      echo "Folder exists."
+      echo "Try another folder name other than $1"
+      echo "Exiting"
+      exit 1
+  fi
+
+  echo "Copying files"
+  cp index.html script.js style.css "../$1/"
+else
+  echo "Error: No project folder given"
+  echo "Usage: ./mkStatic folderName"
+fi
