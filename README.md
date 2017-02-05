@@ -1,4 +1,4 @@
-# Project Name here
+# Static Starter
 
 This project is used to start simple html websites.
 

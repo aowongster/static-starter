@@ -17,6 +17,7 @@ then
 
   echo "Copying files"
   cp index.html script.js style.css "../$1/"
+  cp README.tmpl "../$1/README.tmpl"
 else
   echo "Error: No project folder given"
   echo "Usage: ./mkStatic folderName"
